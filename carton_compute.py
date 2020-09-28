@@ -69,5 +69,5 @@ class CartonCompute():
             
 
 
-print(CartonCompute().carton_opreation([6, 5, 4, 3, 2, 1], 6)) # RESULT: Successful
-print(CartonCompute().inverse_opreation_of_carton(24, 6)) # RESULT: Successful
+# print(CartonCompute().carton_opreation([6, 5, 4, 3, 2, 1], 6)) # RESULT: Successful
+# print(CartonCompute().inverse_opreation_of_carton(24, 6)) # RESULT: Successful
