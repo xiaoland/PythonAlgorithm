@@ -20,6 +20,8 @@ class BasicAlgorithm():
             return 1
         
         result = 1
-        for i in range(1, x):
+        for i in range(2, x+1):
             result*=i
         return result
+
+# print(BasicAlgorithm().get_factorial(4)) # -RESULT: Successful
