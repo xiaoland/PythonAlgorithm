@@ -41,6 +41,9 @@ class CartonCompute():
         :param length: 序列长度
         :return list
         """
+        if index < self.basicAlgorithm.get_factorial(length):
+            raise Exception("Your index can't small than the length you gave's factorial!")
+
         index -= 1
         appear = []
         ans = []
@@ -67,4 +70,4 @@ class CartonCompute():
 
 
 print(CartonCompute().carton_opreation([6, 5, 4, 3, 2, 1], 6)) # RESULT: Successful
-print(CartonCompute().inverse_opreation_of_carton(24, 5)) # RESULT: Successful
+print(CartonCompute().inverse_opreation_of_carton(24, 6)) # RESULT: Successful
