@@ -13,12 +13,17 @@ class CartonCompute():
 
         """
         计算阶乘
-        :param x: x!的x
+        :param x: x!的x (x>0)
         :return int
         """
+        if x < 0:
+            return 0
+        elif x == 0:
+            return 1
+        
         result = 1
         for i in range(1, x):
-            result = result*i
+            result*=i
         return result
 
     def carton_opreation(self, array, length):
@@ -74,5 +79,5 @@ class CartonCompute():
             
 
 
-print(CartonCompute().carton_opreation([4, 3, 2, 1], 4)) # RESULT: Successful
-print(CartonCompute().inverse_opreation_of_carton(24, 5)) # RESULT: 
+# print(CartonCompute().carton_opreation([4, 3, 2, 1], 4)) # RESULT: Successful
+# print(CartonCompute().inverse_opreation_of_carton(24, 5)) # RESULT: Successful
