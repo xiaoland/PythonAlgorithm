@@ -23,7 +23,8 @@ class CartonCompute():
 
         appear = []
         ans = 0
-        for i in range(0, length):
+        array.insert(0, 0)
+        for i in range(0, length+1):
             nac = 0
             for j in range(1, array[i]):
                 if j not in appear:
@@ -47,7 +48,7 @@ class CartonCompute():
         index -= 1
         appear = []
         ans = []
-        for i in range(0, length):
+        for i in range(0, length): # ERROR FIX IN 8.29
             now_factorial = self.basicAlgorithm.get_factorial(length-i)
             nac = index / now_factorial
             index -= nac*now_factorial
@@ -69,5 +70,5 @@ class CartonCompute():
             
 
 
-# print(CartonCompute().carton_opreation([6, 5, 4, 3, 2, 1], 6)) # RESULT: Successful
-# print(CartonCompute().inverse_opreation_of_carton(24, 6)) # RESULT: Successful
+print(CartonCompute().carton_opreation([4, 3, 2, 1], 4)) # RESULT: Successful
+print(CartonCompute().inverse_opreation_of_carton(24, 4)) # RESULT: Successful
