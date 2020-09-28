@@ -2,29 +2,13 @@
 # author: Lan_zhijiang
 # description: 康托运算及其逆运算
 
+from base.basic_algorithm import BasicAlgorithm
 
 class CartonCompute():
     
     def __init__(self):
     
-        pass
-
-    def get_factorial(self, x):
-
-        """
-        计算阶乘
-        :param x: x!的x (x>0)
-        :return int
-        """
-        if x < 0:
-            return 0
-        elif x == 0:
-            return 1
-        
-        result = 1
-        for i in range(1, x):
-            result*=i
-        return result
+        self.basicAlgorithm = BasicAlgorithm()
 
     def carton_opreation(self, array, length):
 
@@ -34,6 +18,9 @@ class CartonCompute():
         :param length: 序列长度
         :return int
         """
+        if len(array) != length:
+            raise Exception("The real length of array is not same as the length you gave!")
+
         appear = []
         ans = 0
         for i in range(0, length):
@@ -42,7 +29,7 @@ class CartonCompute():
                 if j not in appear:
                     nac+=1
             appear.append(array[i])
-            ans = ans + nac*self.get_factorial(length-i)
+            ans = ans + nac*self.basicAlgorithm.get_factorial(length-i)
         
         return ans+1
 
@@ -58,7 +45,7 @@ class CartonCompute():
         appear = []
         ans = []
         for i in range(0, length):
-            now_factorial = self.get_factorial(length-i)
+            now_factorial = self.basicAlgorithm.get_factorial(length-i)
             nac = index / now_factorial
             index -= nac*now_factorial
             
@@ -79,5 +66,5 @@ class CartonCompute():
             
 
 
-# print(CartonCompute().carton_opreation([4, 3, 2, 1], 4)) # RESULT: Successful
-# print(CartonCompute().inverse_opreation_of_carton(24, 5)) # RESULT: Successful
+print(CartonCompute().carton_opreation([6, 5, 4, 3, 2, 1], 6)) # RESULT: Successful
+print(CartonCompute().inverse_opreation_of_carton(24, 5)) # RESULT: Successful
