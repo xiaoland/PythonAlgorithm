@@ -2,7 +2,10 @@
 # author: Lan_zhijiang
 # description: 康托运算及其逆运算
 
+import sys
+sys.path.append("..")
 from base.basic_algorithm import BasicAlgorithm
+
 
 class CartonCompute():
     
@@ -52,7 +55,8 @@ class CartonCompute():
             now_factorial = self.basicAlgorithm.get_factorial(length-i)
             nac = index / now_factorial
             index -= nac*now_factorial
-            
+            write_in = 0
+
             for j in range(1, length+1):
                 if j not in appear:
                     write_in = j
@@ -69,6 +73,5 @@ class CartonCompute():
         return ans
             
 
-
-print(CartonCompute().carton_opreation([4, 3, 2, 1], 4)) # RESULT: Successful
-print(CartonCompute().inverse_opreation_of_carton(24, 4)) # RESULT: Successful
+# print(CartonCompute().carton_opreation([4, 3, 2, 1], 4)) # RESULT: Successful
+# print(CartonCompute().inverse_opreation_of_carton(24, 4)) # RESULT: Successful
