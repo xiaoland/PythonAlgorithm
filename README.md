@@ -1,4 +1,4 @@
-# PythonAlgorithmPackage
+# PythonAlgorithmsPackage
 - 顾名思义，本python包就是提供各种基础算法的一个综合包
 
 ## What's inside?
