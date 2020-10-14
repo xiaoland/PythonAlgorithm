@@ -28,7 +28,7 @@ class SelectionSort():
                 raise Exception("The end point can't bigger than the length of array!")
 
             for j in range(start, end):
-                smallest, where = self.basic_algorithm.get_smallest(array[start+j:end+1])
+                smallest, where = self.basic_algorithm.get_smallest(array[j:end+1])
                 array[j+where] = array[j]
                 array[j] = smallest
 
@@ -37,4 +37,4 @@ class SelectionSort():
             raise Exception("You can't sort a array but its type is not list or tuple!")
 
 
-# print(SelectionSort().start([8, 9, 7, 6, 11, 17, 10])) # TEST-RESULT: SUCCESSFUL
+print(SelectionSort().start([8, 9, 7, 6, 11, 17, 10])) # TEST-RESULT: SUCCESSFUL
