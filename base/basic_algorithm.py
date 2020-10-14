@@ -108,5 +108,21 @@ class BasicAlgorithm():
         dfs(1)
         return result
 
+    def get_smallest(self, array):
+
+        """
+        获取最小的那个数
+        :param array: 输入数组
+        :return: result, where
+        """
+        result = array[0]
+        where = 0
+        for i in range(0, len(array)):
+            if array[i] <= result:
+                result = array[i]
+                where = i
+        
+        return result, where
+
 
 # print(BasicAlgorithm().get_factorial(4)) # -RESULT: Successful
