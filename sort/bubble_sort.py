@@ -22,7 +22,7 @@ class BubbleSort():
         if type(array) is list or type(array) is tuple:
             if end is None:
                 end = len(array)-1
-            if end - start > len(array):
+            if end - start + 1 > len(array):
                 raise Exception("The end point can't bigger than the length of array!")
 
             for j in range(end, start, -1):

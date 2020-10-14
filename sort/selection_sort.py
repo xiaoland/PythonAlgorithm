@@ -24,7 +24,7 @@ class SelectionSort():
         if type(array) is list or type(array) is tuple:
             if end is None:
                 end = len(array)-1
-            if end - start > len(array):
+            if end - start + 1 > len(array):
                 raise Exception("The end point can't bigger than the length of array!")
 
             for j in range(start, end):
@@ -37,4 +37,4 @@ class SelectionSort():
             raise Exception("You can't sort a array but its type is not list or tuple!")
 
 
-print(SelectionSort().start([8, 9, 7, 6, 11, 17, 10])) # TEST-RESULT: SUCCESSFUL
+# print(SelectionSort().start([8, 9, 7, 6, 11, 17, 10])) # TEST-RESULT: SUCCESSFUL
