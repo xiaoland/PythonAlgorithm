@@ -121,7 +121,7 @@ class BasicAlgorithm():
             if array[i] <= result:
                 result = array[i]
                 where = i
-        
+
         return result, where
 
 
