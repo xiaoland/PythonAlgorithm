@@ -17,7 +17,7 @@ class BubbleSort():
         :param array: 要排序的数组
         :param start: 开始的index
         :param end: 结束的index
-        :return: list/tuple (depend on what you gave)
+        :return: list
         """
         if type(array) is list or type(array) is tuple:
             if end is None:
@@ -34,7 +34,7 @@ class BubbleSort():
 
             return array
         else:
-            raise Exception("You can't sort a array but its type is not list or tuple!")
+            raise Exception("You can't sort a array but its type is not list!")
 
 
 # print(BubbleSort().start([8, 9, 7, 6, 11, 17, 10])) # TEST-RESULT: SUCCESSFUL

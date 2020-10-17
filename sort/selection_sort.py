@@ -19,9 +19,9 @@ class SelectionSort():
         :param array: 待排序的数组
         :param start: 开始的index
         :param end: 结束的index
-        :return: list/tuple
+        :return: list
         """
-        if type(array) is list or type(array) is tuple:
+        if type(array) is list:
             if end is None:
                 end = len(array)-1
             if end - start + 1 > len(array):
@@ -34,7 +34,7 @@ class SelectionSort():
 
             return array
         else:
-            raise Exception("You can't sort a array but its type is not list or tuple!")
+            raise Exception("You can't sort a array but its type is not list!")
 
 
 # print(SelectionSort().start([8, 9, 7, 6, 11, 17, 10])) # TEST-RESULT: SUCCESSFUL
